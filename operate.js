@@ -15,8 +15,18 @@ function operate(i){
         result = 0;
         screenValue = 0;
     }
+    else if(i == 16){ // if the input is DEL
 
-    if (i < 11) { // if the input is a number, we add it to the array
+        numbers.pop();
+        screenValue = "";
+        
+        for(let i = 0; i < numbers.length; i++){
+            screenValue += numbers[i];
+        }
+    }
+    
+
+    if (i < 11) { // if the input is a number or ".", we add it to the array
 
         if(!(numbers.length == 0 && i == 0)){ // this avoids the screen get 000000
             
@@ -38,7 +48,7 @@ function operate(i){
         screenValue = screenValue.substring(1); //this is a way to remove the first character of a string
     }
 
-    if (i < 19 && i > 10){ // if input is {+, -, *, /, =, AC} 
+    if (i < 16 && i > 10){ // if input is {+, -, *, /, =} 
 
         if(screenValue != result){ // this if lets you make chain operations
 
@@ -72,7 +82,7 @@ function operate(i){
             result = operators;
             screenValue = result;
         }
-        else {
+        else { // this part is responsible for showing on screen the operation we're dealing with
             
             switch(i){
                 case 11: 
