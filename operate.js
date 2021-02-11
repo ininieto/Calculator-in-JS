@@ -101,10 +101,7 @@ function operate(i){
                 default:
                     break;
             }
-
-            
         }
-
         prev_i = i;
     }   
 }

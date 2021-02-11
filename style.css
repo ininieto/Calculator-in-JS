@@ -1,9 +1,7 @@
 body{
 
 
-    background-color:rgb(33, 33, 36) ;
-
-
+    background-color:rgb(33, 33, 36); 
 }
 
 #header{
@@ -29,9 +27,6 @@ body{
     text-align: right;
     font-family: verdana;
     font-size: 30px;
-
-
-
 }
 
 table{
