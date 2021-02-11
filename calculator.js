@@ -3,9 +3,9 @@
 let id = [];
 let button = [];
 
+/* Adittion of the event listeners to the tiles */
 
-
-for(let i = 0; i < 19; i++){ 
+for(let i = 0; i < 18; i++){ 
 
     let str1 = "button";
 
@@ -18,7 +18,8 @@ for(let i = 0; i < 19; i++){
 }
 
 
-/* Function that shows on the screen the tile you just pressed */
+/* Function that shows on the screen the tile you just pressed 
+   It also manages the special characters, like +, -, =, AC... */
 
 function writeScreen(i) {
 

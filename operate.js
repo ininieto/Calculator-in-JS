@@ -8,6 +8,14 @@ let screenValue = ""; // yep, this variable will contain the number that will be
 
 function operate(i){
 
+    if(i == 17){ // if the input is AC
+
+        numbers = [];
+        operators = [];
+        result = 0;
+        screenValue = 0;
+    }
+
     if (i < 11) { // if the input is a number, we add it to the array
 
         if(!(numbers.length == 0 && i == 0)){ // this avoids the screen get 000000
@@ -30,7 +38,7 @@ function operate(i){
         screenValue = screenValue.substring(1); //this is a way to remove the first character of a string
     }
 
-    if (i < 16 && i > 10){ // if input is {+, -, *, /, =} 
+    if (i < 19 && i > 10){ // if input is {+, -, *, /, =, AC} 
 
         if(screenValue != result){ // this if lets you make chain operations
 
@@ -79,9 +87,7 @@ function operate(i){
                 case 14:
                     screenValue = "/";
                     break;
-
-                case 15:
-                    screenValue = "paiaso";
+                
                 default:
                     break;
             }
