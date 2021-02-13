@@ -20,4 +20,20 @@ for(let i = 0; i < 18; i++){
         document.getElementById("screen").innerHTML = screenValue;
     });
 
-}
+    button[i].addEventListener("mouseover", () => { // function that darks the tile the user is marking
+
+         button[i].style.background = "rgb(70, 73, 87)";
+
+    });
+
+    button[i].addEventListener("mouseleave", () => { //arrow function that restores the color of a tile when the mouse leaves
+
+        button[i].style.background = "rgb(163, 167, 184)";
+
+    });
+
+
+
+    };
+
+
